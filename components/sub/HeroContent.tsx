@@ -1,6 +1,4 @@
-"use client";
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   slideInFromLeft,
@@ -10,7 +8,27 @@ import {
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
+const descriptions = [
+  "Desenvolvedor",
+  "Empreendedor",
+  "Estudante",
+];
+
 const HeroContent = () => {
+  const [currentDescription, setCurrentDescription] = useState(descriptions[0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDescription(prev => {
+        const currentIndex = descriptions.indexOf(prev);
+        const nextIndex = (currentIndex + 1) % descriptions.length;
+        return descriptions[nextIndex];
+      });
+    }, 3000); // Troca a cada 3 segundos
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <motion.div
       initial="hidden"
@@ -24,7 +42,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Fullstack Developer Portfolio
+            Typescript Developer Web/Mobile
           </h1>
         </motion.div>
 
@@ -32,29 +50,27 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
+          Rodrigo Gomes
+
           <span>
-            Providing
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+            </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              the best{" "}
+              {currentDescription}{" "}
             </span>
-            project exprience
           </span>
         </motion.div>
-
-        <motion.p
-          variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
-        >
-          I&apos;m a Full Stack Software Engineer with experience in Website,
-          Mobile, and Software development. Check out my projects and skills.
-        </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
+          href="https://www.linkedin.com/in/digaogomes/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
-          Learn More!
+          Baixar CV
         </motion.a>
+
       </div>
 
       <motion.div

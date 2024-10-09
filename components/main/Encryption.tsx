@@ -1,65 +1,37 @@
 "use client";
 import React from "react";
-
 import { motion } from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
-import Image from "next/image";
+import { SparklesIcon } from '@heroicons/react/24/solid';
 
 const Encryption = () => {
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full">
-      <div className="absolute w-auto h-auto top-0 z-[5]">
+    <div id="Encryption" className="flex flex-col items-center justify-center min-h-screen w-full h-full ">
+      <div className="relative flex flex-col items-center mb-10">
         <motion.div
           variants={slideInFromTop}
-          className="text-[40px] font-medium text-center text-gray-200"
+          className="Welcome-box py-[16px] px-[14px] border border-[#7042f88b] opacity-[0.9] rounded-lg bg-[#1a1a1a] shadow-md"
         >
-          Performance
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-            {" "}
-            &{" "}
-          </span>
-          Security
+          <SparklesIcon className="text-[#b49bff] mr-[10px] h-7 w-7" />
+          <h1 className="Welcome-text text-[30px] font-semibold text-gray-200">
+            Sobre
+          </h1>
         </motion.div>
       </div>
-
-      <div className="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto">
-        <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
-          <Image
-            src="/LockTop.png"
-            alt="Lock top"
-            width={50}
-            height={50}
-            className="w-[50px] translate-y-5 transition-all duration-200 group-hover:translate-y-11"
-          />
-          <Image
-            src="/LockMain.png"
-            alt="Lock Main"
-            width={70}
-            height={70}
-            className=" z-10"
-          />
-        </div>
-
-        <div className="Welcome-box px-[15px] py-[4px] z-[20] brder my-[20px] border-[#7042f88b] opacity-[0.9]">
-          <h1 className="Welcome-text text-[12px]">Encryption</h1>
-        </div>
-      </div>
-      <div className="absolute z-[20] bottom-[10px] px-[5px]">
-        <div className="cursive text-[20px] font-medium text-center text-gray-300">
-          Secure your data with end-to-end encryption
-        </div>
-      </div>
-
-      <div className="w-full flex items-start justify-center absolute">
-        <video
-          loop
-          muted
-          autoPlay
-          playsInline
-          preload="false"
-          className="w-full h-auto"
-          src="/encryption.webm/"
-        />
+      <div className="max-w-6x2 text-[20px] leading-relaxed text-gray-300 bg-[#1a1a1a] p-16 rounded-lg shadow-lg">
+        <p className="text-[24px] font-bold mb-4">Muito prazer, sou Rodrigo Gomes.</p>
+        <p>
+          Moro em Rio Pomba, Minas Gerais, e sou formado em Técnico de Informática pelo IFSEMG. Atualmente, estou cursando Ciência da Computação no IFSEMG e trabalho como Desenvolvedor Full Stack em uma startup onde sou CTO e Desenvolvedor.
+        </p>
+        <p className="mt-4">
+          Foco na área de Desenvolvimento Web e Mobile, utilizando tecnologias como React Native / Angular para o front-end e Node.js, TypeScript e PHP para o back-end, além de bancos de dados como PostgreSQL, MySQL e SQLite.
+        </p>
+        <p className="mt-4">
+          Contudo também possuo conhecimento em deploy em plataformas como Vercel e Google Cloud.
+        </p>
+        <p className="mt-4">
+          Este portifólio veio com o objetivo de documentar minha jornada e mostrar os projetos que venho desenvolvendo onde abaixo você poderá encontrar alguns.
+        </p>
       </div>
     </div>
   );

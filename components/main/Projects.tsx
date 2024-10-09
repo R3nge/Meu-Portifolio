@@ -8,24 +8,31 @@ const Projects = () => {
       id="projects"
     >
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
-        My Projects
+        Meus Projetos
       </h1>
-      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-5">
+
         <ProjectCard
-          src="/NextWebsite.png"
-          title="Modern Next.js Portfolio"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src="/portifolioantigo.jpeg"
+          title="Portifólio (Antigo)"
+          description="Meu antigo portifólio feito em Angular e Typescript para testar meus conhecimentos após concluir o Bootcamp Angular (Powered By IFood) da Plataforma DIO."
         />
         <ProjectCard
-          src="/CardImage.png"
-          title="Interactive Website Cards"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src="/vistofront.jpeg"
+          title="Visto App (Front-End)"
+          description="Front-End de um Aplicativo de Vistorias construido em React-Native utilizando algumas técnologias como Async Storage, Redux e Axios."
         />
         <ProjectCard
-          src="/SpaceWebsite.png"
-          title="Space Themed Website"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src="/jsonExample.png"
+          title="Visto App (Back-End)"
+          description="API que corresponde ao aplicativo de Vistorias feita em NodeJs utilizando o Banco de Dados PostgreSQL onde ambos os ambientes estão hospedados em nuvem."
         />
+        <ProjectCard
+          src="/ExemploPDF.jpeg"
+          title="Exportação de Documentos (Back-End)"
+          description="API de exportação de documentos em PDF ou DOCX onde cada documento tem seu modelo pré definido."
+        />
+
       </div>
     </div>
   );
