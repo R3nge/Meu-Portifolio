@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
@@ -63,12 +65,12 @@ const HeroContent = () => {
         </motion.div>
         <motion.a
           variants={slideInFromLeft(1)}
-          href="https://www.linkedin.com/in/digaogomes/"
+          href="https://drive.google.com/file/d/1ZN8eI75SXibfa9Mtf1TGymf0bpW1Maxf/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
-          Baixar CV
+          Download CV
         </motion.a>
 
       </div>
