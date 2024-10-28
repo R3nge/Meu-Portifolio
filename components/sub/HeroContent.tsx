@@ -11,9 +11,9 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
 const descriptions = [
-  "Desenvolvedor",
-  "Empreendedor",
-  "Estudante",
+  "Developer",
+  "Student",
+  "Freelancer",
 ];
 
 const HeroContent = () => {
@@ -59,7 +59,7 @@ const HeroContent = () => {
             </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              {currentDescription}{" "}
+              I am {currentDescription}{" "}
             </span>
           </span>
         </motion.div>
