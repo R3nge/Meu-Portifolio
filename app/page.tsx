@@ -1,29 +1,28 @@
-import Encryption from "@/components/main/Encryption";
 import Hero from "@/components/main/Hero";
-import Navbar from "@/components/main/Navbar";
-import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
-import Image from "next/image";
+import Encryption from "@/components/main/Encryption";
+import Projects from "@/components/main/Projects";
+import Navbar from "@/components/main/Navbar";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="h-full w-full pt-16"> {/* Adiciona padding para evitar que a navbar fixe sobre o conteúdo */}
+      <main className="h-full w-full pt-16 px-4 sm:px-8 md:px-16">
         <div className="flex flex-col gap-20">
-          <section id="hero"> {/* ID deve ser 'hero' */}
+          <section id="hero" className="w-full">
             <Hero />
           </section>
 
-          <section id="skills"> {/* ID deve ser 'skills' */}
+          <section id="skills" className="w-full">
             <Skills />
           </section>
 
-          <section id="encryption"> {/* ID deve ser 'encryption' */}
+          <section id="encryption" className="w-full">
             <Encryption />
           </section>
 
-          <section id="projects"> {/* ID deve ser 'projects' */}
+          <section id="projects" className="w-full">
             <Projects />
           </section>
         </div>
@@ -31,4 +30,3 @@ export default function Home() {
     </>
   );
 }
-
